@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    /* font-size: 62.5%; */
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #343a40;
+    font-family: "Open Sans", sans-serif;
+    color: #222;
+    font-weight: 400;
+}
+
+input:focus, button:focus, select:focus, textarea:focus {
+    box-shadow: none !important;
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+button {
+    outline: none !important;
+}
+
+.btn,
+.jumbotron,
+.nav:hover {
+    border-radius: 0px;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+/* footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+} */
+
+/* Products */
+
+.products {
+    padding-top: 1rem;
+}
+
+.products .product-layout {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+	gap: 3rem;
+	max-width: 130rem;
+	margin: 0 auto 3rem auto;
+	padding: 0 1.6rem;
+}
+
+.products .product {
+	overflow: hidden;
+	box-shadow: 0 5px 7px 0 rgba(0, 0, 0, .24);
+}
+
+.products .product .img-container {
+	position: relative;
+	cursor: pointer;
+}
+
+.products .product .img-container img {
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
+}
+
+.products .product .bottom {
+	padding: 1rem;
+	text-align: center;
+}
+
+.products .product .bottom a {
+    color: #000;
+	margin-bottom: 1rem;
+	font-weight: inherit;
+	font-size: 1.2rem;
+}
+
+.products .product .bottom a:hover {
+	color: #ff4545;
+}
+
+.products .product .bottom span {
+	color: #000;
+	font-size: 1.5rem;
+}
+
+.products .product .bottom .cancel {
+	font-size: 1.4rem;
+	color: #828282;
+	text-decoration: line-through;
+}
+
+.products .product .addCart {
+    font-size: 20px;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	background-color: #fff;
+    color: #000;
+	border-radius: 10px 0 0 0;
+	padding: .5rem 1rem;
+	box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, 0.1);
+	transition: all .3s ease;
+}
+
+.products .product .addCart:hover {
+	background-color: #ff4545;
+	color: #fff;
+}
+
+.products .product i {
+	transition: all .3s ease;
+}
+
+/* Responsive */
+
+@media only screen and (max-width: 996px) {
+	.products .prodouct-layout {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+
+@media only screen and (max-width: 768px) {
+    .products .prodouct-layout {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 567px) {
+    .products .prodouct-layout {
+		grid-template-columns: 1fr;
+	}
+}
+
